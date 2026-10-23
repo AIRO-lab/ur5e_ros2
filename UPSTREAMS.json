@@ -1,0 +1,34 @@
+{
+  "snapshot_date": "2026-10-23",
+  "layout": "Source copies included directly; no submodules.",
+  "repositories": [
+    {
+      "directory": "Universal_Robots_ROS2_Driver",
+      "repository": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver",
+      "commit": "e87296cbbef0a7f98885467ad9c71d1105fdffdb",
+      "existing_local_changes": []
+    },
+    {
+      "directory": "dh_ag95_gripper_ros2",
+      "repository": "https://github.com/ian-chuang/dh_ag95_gripper_ros2",
+      "commit": "fc4f80fdfb3acae5626df4359aec1401cb71a9a3",
+      "existing_local_changes": [
+        "README.md",
+        "dh_gripper_driver/config/dh_ag95_controllers.yaml",
+        "dh_gripper_driver/launch/dh_ag95_control.launch.py"
+      ]
+    },
+    {
+      "directory": "serial-ros2",
+      "repository": "https://github.com/ian-chuang/serial-ros2",
+      "commit": "da73771cf7debc5dcdcb9dfe3c1e226baf963745",
+      "existing_local_changes": []
+    }
+  ],
+  "bundle_changes": [
+    {
+      "file": "Universal_Robots_ROS2_Driver/ur_robot_driver/launch/ur_control.launch.py",
+      "change": "headless_mode default false -> true"
+    }
+  ]
+}
