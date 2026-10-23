@@ -2,8 +2,6 @@
 
 Ubuntu 22.04 / ROS 2 Humble에서 UR5e와 DH Robotics AG-160-95-W-S를 사용하는 수업용 통합 소스다. UR 드라이버, 그리퍼 드라이버와 serial 라이브러리를 한 저장소에 포함했다.
 
-수업용 저장소: [AIRO-lab/ur5e_ros2](https://github.com/AIRO-lab/ur5e_ros2)
-
 ## 포함된 구성
 
 | 폴더 | 내용 |
@@ -17,7 +15,7 @@ Ubuntu 22.04 / ROS 2 Humble에서 UR5e와 DH Robotics AG-160-95-W-S를 사용하
 
 ## 설치
 
-ROS 2 Humble이 설치된 Ubuntu 22.04에서 진행한다. 기존 `ros_ur_driver/src`에는 같은 패키지가 있으므로, 아래처럼 **새 작업공간**에서 빌드한다.
+ROS 2 Humble이 설치된 Ubuntu 22.04에서 진행한다.
 
 ```bash
 sudo apt install \
@@ -85,8 +83,3 @@ ros2 topic pub --once /gripper/forward_position_controller/commands std_msgs/msg
 ```
 
 팔과 그리퍼는 각각 제어한다. 이 저장소는 두 장치가 합쳐진 MoveIt 모델이나 자동 Pick & Place 코드를 제공하지 않는다. 후속 실습에서 모델·설정을 통합하거나 동작 완료를 확인하며 명령을 순서대로 호출하는 코드를 작성한다.
-
-## 실습 자료
-
-- [HTML 실습 가이드](docs/UR5e_DH_노트북_실습가이드.html): 파일을 내려받아 브라우저에서 연다. 사진·영상이 HTML에 포함되어 있다.
-- [Markdown 실습 가이드](docs/UR5e_DH_노트북_실습가이드.md): 내용과 명령 편집용 원본. 미디어는 HTML 파일에서 확인한다.
