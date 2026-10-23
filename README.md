@@ -88,18 +88,3 @@ ros2 topic pub --once /gripper/forward_position_controller/commands std_msgs/msg
 
 - [HTML 실습 가이드](docs/UR5e_DH_노트북_실습가이드.html): 파일을 내려받아 브라우저에서 연다. 사진·영상이 HTML에 포함되어 있다.
 - [Markdown 실습 가이드](docs/UR5e_DH_노트북_실습가이드.md): 내용과 명령 편집용 원본. 미디어는 HTML 파일에서 확인한다.
-
-## 원본 출처와 변경 사항
-
-원본 저장소·커밋은 [UPSTREAMS.json](UPSTREAMS.json)에 기록했다. 기존 그리퍼 namespace 수정 3개 파일을 포함하고, UR launch의 Headless 기본값을 `false`에서 `true`로 바꿨다.
-
-라이선스는 구성 요소별로 다르다. 각 폴더의 LICENSE·README와 소스 저작권 고지를 보존했으며, [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)에 위치를 정리했다.
-
-## 확인 결과 — 2026-10-23
-
-- Ubuntu 22.04 / ROS 2 Humble의 기본 설치만 source한 별도 빌드·설치 경로에서 **10개 패키지 빌드 성공**. Release, `BUILD_TESTING=OFF`, 동시 컴파일 2개 설정으로 확인했다.
-- `rosdep check`에서 시스템 의존성 충족을 확인했다.
-- 새 설치본의 `--show-args`에서 UR `headless_mode=true`, 그리퍼 `namespace=gripper`와 고정 장치 경로를 확인했다.
-- 기존 작업공간의 소스 파일 392개는 복사 전후 해시가 동일하다.
-
-이 확인은 컴파일과 launch 인자 조회까지다. 이번 통합본으로 실물 로봇을 다시 구동하거나 하드웨어 시험을 실행하지는 않았다. 그리퍼 컴파일에는 원본 코드의 미사용 인자·변수 경고 2건이 있었으며 빌드는 정상 완료됐다.
