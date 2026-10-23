@@ -53,12 +53,12 @@ sudo apt install \
 
 수업용 통합 저장소에는 UR 드라이버, 수정된 그리퍼 패키지와 serial 의존성이 함께 들어 있다. 학생은 아래 **한 번의 clone**으로 소스를 받는다. 패키지가 중복되지 않도록 새 작업공간을 사용한다.
 
-<div class="note">통합 저장소 주소는 아직 미정이다. 배포 전 <code>{수업용_저장소_URL}</code>을 실제 주소로 교체한다.</div>
+<div class="note">수업용 저장소: <a href="https://github.com/AIRO-lab/ur5e_ros2">AIRO-lab/ur5e_ros2</a>. 아래 명령으로 작업공간의 <code>src/ur5e_ros2</code> 폴더에 내려받는다.</div>
 
 ```bash
 mkdir -p ~/{your_ros2_workspace}/src
 cd ~/{your_ros2_workspace}/src
-git clone {수업용_저장소_URL} ur5e_dh_course
+git clone https://github.com/AIRO-lab/ur5e_ros2.git
 ```
 
 rosdep을 처음 사용하는 노트북에서는 한 번 초기화한다. 이미 초기화했다면 `rosdep update`만 실행한다.
